@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+
+main {
+  margin: 50px 25vw 15vh 25vw;
+  text-align: justify;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 3vw, 5rem);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 2vw, 5rem);
+}
+
+h4 {
+  font-size: clamp(1rem, 1vw, 5rem);
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    margin: 50px 10vw 5vh 10vw;
+  }
+
+  .title {
+    text-align: center;
+  }
+}
+
+p {
+  font-size: clamp(1rem, 1vw, 5rem);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  border: 1px solid #d1e2e3;
+  box-shadow: 1 1px rgba(64, 87, 109, 0.07);
+}
+
+figcaption {
+  padding: 10px 0px 10px 0px;
+  border-bottom: thin solid #d1e2e3;
+  font: small-caption;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  -webkit-border-radius: 3px 3px 3px 3px;
+  border: 1px solid #d1e2e3;
+  padding: 1rem;
+  margin-bottom: 3vh;
+}
+
+section {
+  margin-top: 10vh;
+}
+
+@media only screen and (max-width: 600px) {
+  blockquote {
+    margin: 0;
+  }
+}
+
+#img-div {
+  margin: 0;
+}

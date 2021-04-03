@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #683fbf;
+  --secondary-color: #ede7f6;
+  --background-elements-color: #ffffff;
+  --surface-elements-color: #d9d6dd;
+  --placeholder-color: #0000008a;
+  --error-color: #d93025;
+}
+
+@media only screen and (min-width: 320px) {
+  section {
+    zoom: 1.2;
+  }
+
+  form {
+    padding: 1.5rem 5% 1.5rem 5%;
+  }
+
+  #form-section {
+    padding: 20px 0 0 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  section {
+    zoom: 1.5;
+  }
+
+  main {
+    display: block;
+  }
+
+  form {
+    padding: 1.5rem 2.5rem 1.5rem 2.5rem;
+  }
+
+  .submit-button {
+    max-width: inherit;
+  }
+
+  #form-section {
+    padding: 15px 0 0 0;
+    -webkit-border-radius: 0px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  section {
+    zoom: 1;
+  }
+
+  main {
+    display: flex;
+    align-item: center;
+    justify-content: center;
+  }
+
+  .submit-button {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
+
+  #form-section {
+    padding: 30px 4% 0 4%;
+    -webkit-border-radius: 5px;
+  }
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--secondary-color);
+}
+
+section {
+  box-shadow: 1 1px rgba(64, 87, 109, 0.07);
+}
+
+label {
+  width: -webkit-fill-available;
+  font-size: 1.125rem;
+  margin-top: 16px;
+}
+
+form {
+  display: flex;
+  flex-flow: column wrap;
+
+  gap: 3vh;
+  background: var(--background-elements-color);
+  max-width: 1000px;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  border: 0;
+  border-bottom: 1px solid var(--surface-elements-color);
+  padding: 500px;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+:focus {
+  outline: 0;
+}
+
+::-moz-placeholder {
+  color: var(--placeholder-color);
+}
+
+:-ms-input-placeholder {
+  color: var(--placeholder-color);
+}
+
+::placeholder,
+select {
+  color: var(--placeholder-color);
+}
+
+.form-group {
+  display: contents;
+}
+
+.border-bottom {
+  border: 0;
+  border-bottom: 1px solid var(--surface-elements-color);
+  height: 40px;
+}
+
+.full-border {
+  border: 1px solid var(--surface-elements-color);
+}
+
+.input {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  color: #202124;
+  background-color: transparent;
+  transition: box-shadow 0.6s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.bf-primary-color:focus {
+  border-color: var(--primary-color);
+}
+
+.span-erro {
+  display: none;
+  color: var(--error-color);
+}
+
+. -erro:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f06a";
+  margin-right: 10px;
+}
+
+.b-error-color:invalid ~ .span-erro {
+  display: block;
+}
+
+.b-error-color:invalid {
+  border-color: var(--error-color);
+}
+
+.dropdown {
+  height: 20vh;
+  max-height: 60px;
+  min-height: 50px;
+  -webkit-border-radius: 5px;
+}
+
+.radio-group {
+  display: contents;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.checkbox-group label {
+  width: 50%;
+}
+
+.submit-button {
+  padding: 15px;
+  background-color: var(--primary-color);
+  color: white;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  margin-top: 16px;
+}
+
+.input-span {
+  display: inline-block;
+  align-items: center;
+  height: auto;
+  min-height: 40px;
+  width: 100%;
+  line-height: 40px;
+  padding: 1px 2px;
+  cursor: text;
+}
+
+.input-textarea {
+  resize: vertical;
+  margin-top: 20px;
+  width: 100%;
+  min-height: 150px;
+  max-height: 200px;
+}
+
+.submit-button:active {
+  background-color: #8569c2;
+  border: 1px solid var(--surface-elements-color);
+}
+
+.submit-button:hover {
+  box-shadow: 0 0 30px rgb(255, 255, 255, 2);
+}
+
+#background-divider {
+  position: absolute;
+  background: var(--primary-color);
+  height: 130px;
+  width: 100%;
+  z-index: -1;
+}

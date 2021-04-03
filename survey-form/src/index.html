@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - FCC Survey Form - Google Form Clone</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<section id="background-divider">
+  <div>
+  </div>
+</section>
+<section id="form-section">
+  <main>
+    <form id="survey-form">
+      <div id="header-form">
+        <h1 id="title" class="form-group">
+          FreeCodeCamp Survey Form
+        </h1>
+        <p id="description">Thank you for taking the time to help us improve the platform</p>
+      </div>
+      <div class="form-group">
+        <label id="name-label" for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required class="input bf-primary-color border-bottom" />
+        <span class="span-erro">Field name is required</span>
+      </div>
+      <div class="form-group">
+        <label id="email-label" , for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your Email" required class="input bf-primary-color border-bottom" />
+        <span class="span-erro">Field email is required</span>
+      </div>
+      <div class="form-group">
+        <label id="number-label" for="number">Age<span>(optional)</span></label>
+        <input type="number" id="number" min="1" max="99" placeholder="Enter your age" class="input bf-primary-color border-bottom" />
+      </div>
+      <div class="form-group">
+        <label id="role-label" for="role">Which option best describes your current role?</label>
+        <select id="dropdown" name="role" class="input dropdown bf-primary-color full-border" required>
+          <option disabled selected value>Select current role</option>
+          <option value="student">Student</option>
+          <option value="job">Full Time Job</option>
+          <option value="learner">Full Time Learner</option>
+          <option value="preferNo">Prefer not to say</option>
+          <option value="other">Other</option>
+        </select>
+        <span class="span-erro">Field current role is required</span>
+      </div>
+      <div class="form-group">
+        <label for="radio-group">Please select your preferred contact method:</label>
+        <div class="radio-group">
+
+          <label for="contactChoice1">
+            <input type="radio" id="contactChoice1" name="contact" value="email" checked class="">Email
+          </label>
+
+          <label for="contactChoice2">
+            <input type="radio" id="contactChoice2" name="contact" value="phone" class="bf-primary-color">Phone
+          </label>
+
+          <label for="contactChoice3"><input type="radio" id="contactChoice3" name="contact" value="mail" class="">Mail</label>
+
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="checkbox-group">Please select your preferred contact method:</label>
+        <div class="checkbox-group">
+          <label><input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox" />Front-end Projects</label>
+          <label>
+            <input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox" />Back-end Projects</label>
+          <label><input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox" />Data Visualization</label>
+          <label><input name="prefer" value="challenges" type="checkbox" class="input-checkbox" />Challenges</label>
+          <label><input name="prefer" value="open-source-community" type="checkbox" class="input-checkbox" />Open Source Community</label>
+          <label><input name="prefer" value="gitter-help-rooms" type="checkbox" class="input-checkbox" />Gitter help rooms</label>
+          <label><input name="prefer" value="videos" type="checkbox" class="input-checkbox" />Videos</label>
+          <label><input name="prefer" value="city-meetups" type="checkbox" class="input-checkbox" />City Meetups</label>
+          <label><input name="prefer" value="wiki" type="checkbox" class="input-checkbox" />Wiki</label>
+          <label><input name="prefer" value="forum" type="checkbox" class="input-checkbox" />Forum</label>
+          <label><input name="prefer" value="additional-courses" type="checkbox" class="input-checkbox" />Additional Courses</label </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label id="profession-label" for="job">Current
+          profession </label>
+        <span id="profession" class="input input-span bf-primary-color border-bottom" name="comment" role="textbox" contenteditable></span>
+
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Any comments or suggestions?
+          <textarea id="comments" class="input input-textarea full-border bf-primary-color" name="comment" role="textbox" contenteditable></textarea>
+        </label>
+
+      </div>
+
+      <div class="form-group">
+        <button id="submit" class="submit-button" type="submit" onclick="validateInputs()"><strong>Submit</strong>
+        </button>
+      </div>
+    </form>
+  </main>
+</section>
+<!-- partial -->
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
